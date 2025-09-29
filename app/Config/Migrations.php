@@ -33,8 +33,7 @@ class Migrations extends BaseConfig
      * - 'sequential' => Numbered migrations (001, 002, 003, ...)
      * - 'timestamp'  => Datetime-based migrations (2025-09-05-153000_)
      */
-    public string $type = 'sequential';   // ✅ matches your lab instructions
-
+    public string $type = 'sequential';  
     /**
      * --------------------------------------------------------------------------
      * Timestamp Format
