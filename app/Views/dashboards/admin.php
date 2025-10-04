@@ -170,6 +170,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('/admin/approvals') ?>">
+                    <i class="fas fa-clock me-1"></i>Pending Approvals
+                    <?php if (($stats['pending_users'] ?? 0) > 0): ?>
+                        <span class="badge bg-danger ms-1"><?= $stats['pending_users'] ?></span>
+                    <?php endif; ?>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('/admin/users') ?>">
                     <i class="fas fa-users me-1"></i>User Management
                 </a>

@@ -3,17 +3,20 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\UserModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class Auth extends BaseController
 {
     protected $db;
     protected $session;
+    protected $userModel;
 
     public function __construct()
     {
         $this->db = \Config\Database::connect();
         $this->session = \Config\Services::session();
+        $this->userModel = new UserModel();
     }
 
     /**
@@ -21,11 +24,6 @@ class Auth extends BaseController
      */
     public function register()
     {
-<<<<<<< HEAD
-        // If user is already logged in, redirect to dashboard
-        if ($this->session->get('user_id')) {
-            return redirect()->to('/dashboard');
-=======
         // If user is already logged in, redirect to role-specific dashboard
         if ($this->session->get('user_id')) {
             $role = $this->session->get('role');
@@ -39,7 +37,6 @@ class Auth extends BaseController
                 default:
                     return redirect()->to('/dashboard');
             }
->>>>>>> 5fb902f (Admin, Teacher, and Student Dashboard)
         }
 
         if ($this->request->getMethod() === 'POST') {
@@ -118,11 +115,6 @@ class Auth extends BaseController
      */
     public function login()
     {
-<<<<<<< HEAD
-        // If user is already logged in, redirect to dashboard
-        if ($this->session->get('user_id')) {
-            return redirect()->to('/dashboard');
-=======
         // If user is already logged in, redirect to role-specific dashboard
         if ($this->session->get('user_id')) {
             $role = $this->session->get('role');
@@ -136,7 +128,6 @@ class Auth extends BaseController
                 default:
                     return redirect()->to('/dashboard');
             }
->>>>>>> 5fb902f (Admin, Teacher, and Student Dashboard)
         }
 
         if ($this->request->getMethod() === 'POST') {
@@ -164,25 +155,39 @@ class Auth extends BaseController
                 $email = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
 
-                // Check if user exists
-                $builder = $this->db->table('users');
-                $user = $builder->where('email', $email)->get()->getRowArray();
+                // Verify user credentials using UserModel
+                $user = $this->userModel->verifyPassword($email, $password);
 
-                if ($user && password_verify($password, $user['password'])) {
+                if ($user) {
+                    // Check user status
+                    if ($user['status'] === 'pending') {
+                        $this->session->setFlashdata('error', 'Your account is pending admin approval. Please wait for approval before logging in.');
+                        return view('auth/login');
+                    } elseif ($user['status'] === 'suspended') {
+                        $this->session->setFlashdata('error', 'Your account has been suspended. Please contact the administrator.');
+                        return view('auth/login');
+                    } elseif ($user['status'] !== 'active') {
+                        $this->session->setFlashdata('error', 'Your account is not active. Please contact the administrator.');
+                        return view('auth/login');
+                    }
+                    
+                    // Regenerate session ID for security
+                    $this->session->regenerate();
+                    
                     // Create session data
                     $sessionData = [
                         'user_id' => $user['id'],
                         'name' => $user['name'],
                         'email' => $user['email'],
                         'role' => $user['role'],
-                        'logged_in' => true
+                        'employee_id' => $user['employee_id'] ?? null,
+                        'student_id' => $user['student_id'] ?? null,
+                        'logged_in' => true,
+                        'login_time' => time()
                     ];
 
                     $this->session->set($sessionData);
                     $this->session->setFlashdata('success', 'Welcome back, ' . $user['name'] . '!');
-<<<<<<< HEAD
-                    return redirect()->to('/dashboard');
-=======
                     
                     // Redirect based on user role
                     switch ($user['role']) {
@@ -195,7 +200,6 @@ class Auth extends BaseController
                         default:
                             return redirect()->to('/dashboard');
                     }
->>>>>>> 5fb902f (Admin, Teacher, and Student Dashboard)
                 } else {
                     $this->session->setFlashdata('error', 'Invalid email or password.');
                 }

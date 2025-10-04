@@ -80,47 +80,33 @@
                             </div>
                         <?php endif; ?>
 
-                        <form action="<?= base_url('/register') ?>" method="post">
-                            <?= csrf_field() ?>
-                            
-                            <div class="mb-3">
-                                <label for="name" class="form-label">
-                                    <i class="fas fa-user me-1"></i>Full Name
-                                </label>
-                                <input type="text" class="form-control" id="name" name="name" 
-                                       value="<?= old('name') ?>" placeholder="Enter your full name" required>
-                            </div>
+                        <div class="text-center mb-4">
+                            <p class="text-muted">Choose your registration type:</p>
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="email" class="form-label">
-                                    <i class="fas fa-envelope me-1"></i>Email Address
-                                </label>
-                                <input type="email" class="form-control" id="email" name="email" 
-                                       value="<?= old('email') ?>" placeholder="Enter your email" required>
+                        <div class="row g-3 mb-4">
+                            <div class="col-12">
+                                <a href="<?= base_url('/register/admin') ?>" class="btn btn-outline-danger w-100 py-3">
+                                    <i class="fas fa-user-shield fa-2x d-block mb-2"></i>
+                                    <strong>Administrator</strong>
+                                    <small class="d-block text-muted">System Administration Access</small>
+                                </a>
                             </div>
-
-                            <div class="mb-3">
-                                <label for="password" class="form-label">
-                                    <i class="fas fa-lock me-1"></i>Password
-                                </label>
-                                <input type="password" class="form-control" id="password" name="password" 
-                                       placeholder="Enter your password" required>
+                            <div class="col-12">
+                                <a href="<?= base_url('/register/teacher') ?>" class="btn btn-outline-success w-100 py-3">
+                                    <i class="fas fa-chalkboard-teacher fa-2x d-block mb-2"></i>
+                                    <strong>Teacher/Educator</strong>
+                                    <small class="d-block text-muted">Create and manage courses</small>
+                                </a>
                             </div>
-
-                            <div class="mb-4">
-                                <label for="password_confirm" class="form-label">
-                                    <i class="fas fa-lock me-1"></i>Confirm Password
-                                </label>
-                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" 
-                                       placeholder="Confirm your password" required>
+                            <div class="col-12">
+                                <a href="<?= base_url('/register/student') ?>" class="btn btn-outline-primary w-100 py-3">
+                                    <i class="fas fa-user-graduate fa-2x d-block mb-2"></i>
+                                    <strong>Student</strong>
+                                    <small class="d-block text-muted">Access courses and learning materials</small>
+                                </a>
                             </div>
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-user-plus me-2"></i>Create Account
-                                </button>
-                            </div>
-                        </form>
+                        </div>
 
                         <div class="text-center mt-4">
                             <p class="mb-0">Already have an account? 

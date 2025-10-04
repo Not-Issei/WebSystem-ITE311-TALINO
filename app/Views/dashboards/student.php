@@ -221,35 +221,137 @@
                     <div class="stats-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <div class="stats-number"><?= $stats['enrolled_courses'] ?></div>
+                    <div class="stats-number"><?= $enrollment_stats['total_enrolled'] ?></div>
                     <div class="stats-label">Enrolled Courses</div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3">
                 <div class="card stats-card assignments">
                     <div class="stats-icon">
-                        <i class="fas fa-tasks"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="stats-number"><?= $stats['completed_assignments'] ?></div>
-                    <div class="stats-label">Completed</div>
+                    <div class="stats-number"><?= $enrollment_stats['completed_courses'] ?></div>
+                    <div class="stats-label">Completed Courses</div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3">
-                <div class="card stats-card pending">
+                <div class="card stats-card grades">
                     <div class="stats-icon">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-search"></i>
                     </div>
-                    <div class="stats-number"><?= $stats['pending_assignments'] ?></div>
-                    <div class="stats-label">Pending</div>
+                    <div class="stats-number"><?= count($available_courses) ?></div>
+                    <div class="stats-label">Available Courses</div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3">
-                <div class="card stats-card grade">
+                <div class="card stats-card announcements">
                     <div class="stats-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-times-circle"></i>
                     </div>
-                    <div class="stats-number"><?= $stats['average_grade'] ?>%</div>
-                    <div class="stats-label">Average Grade</div>
+                    <div class="stats-number"><?= $enrollment_stats['dropped_courses'] ?></div>
+                    <div class="stats-label">Dropped Courses</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enrolled Courses Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0"><i class="fas fa-book-open me-2"></i>My Enrolled Courses</h5>
+                        <span class="badge bg-light text-dark"><?= count($enrolled_courses) ?> courses</span>
+                    </div>
+                    <div class="card-body">
+                        <?php if (!empty($enrolled_courses)): ?>
+                            <div class="row">
+                                <?php foreach ($enrolled_courses as $course): ?>
+                                    <div class="col-md-6 col-lg-4 mb-3">
+                                        <div class="card h-100 border-primary">
+                                            <div class="card-body">
+                                                <h6 class="card-title text-primary"><?= esc($course['course_code']) ?></h6>
+                                                <h5 class="card-subtitle mb-2"><?= esc($course['course_name']) ?></h5>
+                                                <p class="card-text text-muted small"><?= esc($course['description']) ?></p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-user me-1"></i><?= esc($course['teacher_name'] ?? 'TBA') ?>
+                                                    </small>
+                                                    <span class="badge bg-success">Enrolled</span>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-calendar me-1"></i>Enrolled: <?= date('M j, Y', strtotime($course['enrollment_date'])) ?>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php else: ?>
+                            <div class="text-center py-4">
+                                <i class="fas fa-book-open fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">No courses enrolled yet</h5>
+                                <p class="text-muted">Start your learning journey by enrolling in available courses below.</p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Available Courses Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0"><i class="fas fa-search me-2"></i>Available Courses</h5>
+                        <span class="badge bg-light text-dark"><?= count($available_courses) ?> available</span>
+                    </div>
+                    <div class="card-body">
+                        <!-- Alert container for enrollment messages -->
+                        <div id="enrollment-alert" class="alert alert-dismissible fade" role="alert" style="display: none;">
+                            <span id="enrollment-message"></span>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+
+                        <?php if (!empty($available_courses)): ?>
+                            <div class="row">
+                                <?php foreach ($available_courses as $course): ?>
+                                    <div class="col-md-6 col-lg-4 mb-3">
+                                        <div class="card h-100 border-secondary">
+                                            <div class="card-body">
+                                                <h6 class="card-title text-secondary"><?= esc($course['course_code']) ?></h6>
+                                                <h5 class="card-subtitle mb-2"><?= esc($course['course_name']) ?></h5>
+                                                <p class="card-text text-muted small"><?= esc($course['description']) ?></p>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-user me-1"></i><?= esc($course['teacher_name'] ?? 'TBA') ?>
+                                                    </small>
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-star me-1"></i><?= esc($course['credits']) ?> credits
+                                                    </small>
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button class="btn btn-outline-primary enroll-btn" 
+                                                            data-course-id="<?= $course['id'] ?>"
+                                                            data-course-name="<?= esc($course['course_name']) ?>">
+                                                        <i class="fas fa-plus me-1"></i>Enroll Now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php else: ?>
+                            <div class="text-center py-4">
+                                <i class="fas fa-graduation-cap fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">No available courses</h5>
+                                <p class="text-muted">You are enrolled in all available courses or no courses are currently available.</p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -371,5 +473,131 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // CSRF Token - Check if it exists
+            const csrfToken = '<?= csrf_hash() ?>' || '';
+            const csrfName = '<?= csrf_token() ?>' || 'csrf_token';
+            
+            // Enrollment functionality
+            $('.enroll-btn').on('click', function(e) {
+                e.preventDefault();
+                
+                const button = $(this);
+                const courseId = button.data('course-id');
+                const courseName = button.data('course-name');
+                const originalText = button.html();
+                
+                // Disable button and show loading
+                button.prop('disabled', true);
+                button.html('<i class="fas fa-spinner fa-spin me-1"></i>Enrolling...');
+                
+                // Prepare AJAX data (CSRF removed from controller)
+                const ajaxData = {
+                    course_id: courseId
+                };
+                
+                // Send AJAX request
+                $.post('<?= base_url('/course/enroll') ?>', ajaxData)
+                .done(function(response) {
+                    if (response.success) {
+                        // Show success message
+                        showAlert('success', response.message);
+                        
+                        // Update button to enrolled state
+                        button.removeClass('btn-outline-primary')
+                              .addClass('btn-success')
+                              .html('<i class="fas fa-check me-1"></i>Enrolled')
+                              .prop('disabled', true);
+                        
+                        // Update stats
+                        updateEnrollmentStats();
+                        
+                        // Move course card to enrolled section (optional)
+                        setTimeout(function() {
+                            location.reload(); // Refresh to show updated data
+                        }, 2000);
+                        
+                    } else {
+                        // Show error message
+                        showAlert('danger', response.message);
+                        
+                        // Re-enable button
+                        button.prop('disabled', false);
+                        button.html(originalText);
+                    }
+                })
+                .fail(function(xhr) {
+                    let errorMessage = 'An error occurred while enrolling. Please try again.';
+                    
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                        errorMessage = xhr.responseJSON.message;
+                    }
+                    
+                    // Show error message
+                    showAlert('danger', errorMessage);
+                    
+                    // Re-enable button
+                    button.prop('disabled', false);
+                    button.html(originalText);
+                });
+            });
+            
+            // Function to show alert messages
+            function showAlert(type, message) {
+                const alertContainer = $('#enrollment-alert');
+                const messageSpan = $('#enrollment-message');
+                
+                // Set alert type and message
+                alertContainer.removeClass('alert-success alert-danger alert-warning alert-info')
+                            .addClass('alert-' + type);
+                messageSpan.html('<i class="fas fa-' + (type === 'success' ? 'check-circle' : 'exclamation-circle') + ' me-2"></i>' + message);
+                
+                // Show alert
+                alertContainer.show().addClass('show');
+                
+                // Auto-hide after 5 seconds
+                setTimeout(function() {
+                    alertContainer.removeClass('show');
+                    setTimeout(function() {
+                        alertContainer.hide();
+                    }, 150);
+                }, 5000);
+                
+                // Scroll to alert
+                $('html, body').animate({
+                    scrollTop: alertContainer.offset().top - 100
+                }, 500);
+            }
+            
+            // Function to update enrollment statistics
+            function updateEnrollmentStats() {
+                // Update enrolled courses count
+                const enrolledCount = parseInt($('.stats-card.courses .stats-number').text()) + 1;
+                $('.stats-card.courses .stats-number').text(enrolledCount);
+                
+                // Update available courses count
+                const availableCount = parseInt($('.stats-card.grades .stats-number').text()) - 1;
+                $('.stats-card.grades .stats-number').text(Math.max(0, availableCount));
+            }
+            
+            // Course search functionality (if needed)
+            $('#course-search').on('keyup', function() {
+                const searchTerm = $(this).val().toLowerCase();
+                
+                $('.course-card').each(function() {
+                    const courseName = $(this).find('.card-subtitle').text().toLowerCase();
+                    const courseCode = $(this).find('.card-title').text().toLowerCase();
+                    
+                    if (courseName.includes(searchTerm) || courseCode.includes(searchTerm)) {
+                        $(this).closest('.col-md-6').show();
+                    } else {
+                        $(this).closest('.col-md-6').hide();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

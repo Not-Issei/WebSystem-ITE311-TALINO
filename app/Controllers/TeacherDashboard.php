@@ -70,10 +70,20 @@ class TeacherDashboard extends BaseController
         // Get courses taught by this teacher (if courses table exists)
         if ($this->db->tableExists('courses')) {
             $builder = $this->db->table('courses');
-            $courses = $builder->where('teacher_id', $this->session->get('user_id'))
-                             ->orderBy('created_at', 'DESC')
-                             ->get()
-                             ->getResultArray();
+            
+            // Check if teacher_id column exists
+            $fields = $this->db->getFieldNames('courses');
+            if (in_array('teacher_id', $fields)) {
+                $courses = $builder->where('teacher_id', $this->session->get('user_id'))
+                                 ->orderBy('created_at', 'DESC')
+                                 ->get()
+                                 ->getResultArray();
+            } else {
+                // If no teacher_id column, show all courses for now
+                $courses = $builder->orderBy('created_at', 'DESC')
+                                 ->get()
+                                 ->getResultArray();
+            }
         }
 
         $data = [
@@ -163,47 +173,77 @@ class TeacherDashboard extends BaseController
      */
     private function getTeacherStats()
     {
-        $stats = [];
-        $teacherId = $this->session->get('user_id');
+        $stats = [
+            'total_courses' => 0,
+            'total_students' => 0,
+            'total_quizzes' => 0,
+            'pending_grades' => 0
+        ];
 
-        // Total courses taught
-        if ($this->db->tableExists('courses')) {
-            $builder = $this->db->table('courses');
-            $stats['total_courses'] = $builder->where('teacher_id', $teacherId)->countAllResults();
-        } else {
-            $stats['total_courses'] = 0;
-        }
+        try {
+            $teacherId = $this->session->get('user_id');
 
-        // Total students enrolled
-        if ($this->db->tableExists('enrollments') && $this->db->tableExists('courses')) {
-            $builder = $this->db->table('enrollments e');
-            $stats['total_students'] = $builder->join('courses c', 'c.id = e.course_id')
-                                             ->where('c.teacher_id', $teacherId)
-                                             ->countAllResults();
-        } else {
-            $stats['total_students'] = 0;
-        }
+            // Check if courses table has teacher_id column
+            $hasTeacherId = false;
+            if ($this->db->tableExists('courses')) {
+                $fields = $this->db->getFieldNames('courses');
+                $hasTeacherId = in_array('teacher_id', $fields);
+            }
 
-        // Total quizzes created
-        if ($this->db->tableExists('quizzes') && $this->db->tableExists('courses')) {
-            $builder = $this->db->table('quizzes q');
-            $stats['total_quizzes'] = $builder->join('courses c', 'c.id = q.course_id')
-                                            ->where('c.teacher_id', $teacherId)
-                                            ->countAllResults();
-        } else {
-            $stats['total_quizzes'] = 0;
-        }
+            // Total courses taught
+            if ($this->db->tableExists('courses')) {
+                $builder = $this->db->table('courses');
+                if ($hasTeacherId) {
+                    $stats['total_courses'] = $builder->where('teacher_id', $teacherId)->countAllResults();
+                } else {
+                    // If no teacher_id column, show all courses for now
+                    $stats['total_courses'] = $builder->countAllResults();
+                }
+            }
 
-        // Pending submissions to grade
-        if ($this->db->tableExists('submissions') && $this->db->tableExists('quizzes') && $this->db->tableExists('courses')) {
-            $builder = $this->db->table('submissions s');
-            $stats['pending_grades'] = $builder->join('quizzes q', 'q.id = s.quiz_id')
-                                              ->join('courses c', 'c.id = q.course_id')
-                                              ->where('c.teacher_id', $teacherId)
-                                              ->where('s.grade IS NULL')
-                                              ->countAllResults();
-        } else {
-            $stats['pending_grades'] = 0;
+            // Total students enrolled
+            if ($this->db->tableExists('enrollments') && $this->db->tableExists('courses')) {
+                $builder = $this->db->table('enrollments e');
+                if ($hasTeacherId) {
+                    $stats['total_students'] = $builder->join('courses c', 'c.id = e.course_id')
+                                                     ->where('c.teacher_id', $teacherId)
+                                                     ->countAllResults();
+                } else {
+                    // If no teacher_id, count all enrolled students
+                    $stats['total_students'] = $builder->countAllResults();
+                }
+            }
+
+            // Total quizzes created
+            if ($this->db->tableExists('quizzes') && $this->db->tableExists('courses')) {
+                $builder = $this->db->table('quizzes q');
+                if ($hasTeacherId) {
+                    $stats['total_quizzes'] = $builder->join('courses c', 'c.id = q.course_id')
+                                                    ->where('c.teacher_id', $teacherId)
+                                                    ->countAllResults();
+                } else {
+                    // If no teacher_id, count all quizzes
+                    $stats['total_quizzes'] = $builder->countAllResults();
+                }
+            }
+
+            // Pending submissions to grade
+            if ($this->db->tableExists('submissions') && $this->db->tableExists('quizzes') && $this->db->tableExists('courses')) {
+                $builder = $this->db->table('submissions s');
+                if ($hasTeacherId) {
+                    $stats['pending_grades'] = $builder->join('quizzes q', 'q.id = s.quiz_id')
+                                                      ->join('courses c', 'c.id = q.course_id')
+                                                      ->where('c.teacher_id', $teacherId)
+                                                      ->where('s.grade IS NULL')
+                                                      ->countAllResults();
+                } else {
+                    // If no teacher_id, count all pending submissions
+                    $stats['pending_grades'] = $builder->where('grade IS NULL')->countAllResults();
+                }
+            }
+        } catch (\Exception $e) {
+            // If there's any database error, return default stats
+            log_message('error', 'Teacher stats error: ' . $e->getMessage());
         }
 
         return $stats;

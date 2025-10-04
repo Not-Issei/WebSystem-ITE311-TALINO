@@ -10,7 +10,17 @@
                         <i class="fas fa-user-plus fa-3x text-primary mb-3"></i>
                         <h5 class="card-title">Get Started</h5>
                         <p class="card-text">Create your account and begin your learning journey with us.</p>
-                        <a href="<?= base_url('/register') ?>" class="btn btn-primary">Register Now</a>
+                        <div class="d-grid gap-2">
+                            <a href="<?= base_url('/register/student') ?>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-user-graduate me-1"></i>Student Registration
+                            </a>
+                            <a href="<?= base_url('/register/teacher') ?>" class="btn btn-success btn-sm">
+                                <i class="fas fa-chalkboard-teacher me-1"></i>Teacher Registration
+                            </a>
+                            <a href="<?= base_url('/register/admin') ?>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-user-shield me-1"></i>Admin Registration
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
