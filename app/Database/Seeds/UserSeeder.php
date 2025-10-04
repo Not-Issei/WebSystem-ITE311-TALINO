@@ -10,22 +10,44 @@ class UserSeeder extends Seeder
     {
         $data = [
             [
-                'name'     => 'Admin User',
-                'email'    => 'admin@lms.com',
-                'password' => password_hash('admin123', PASSWORD_DEFAULT),
-                'role'     => 'admin'
+                'name'       => 'Admin User',
+                'email'      => 'admin@lms.com',
+                'password'   => password_hash('admin123', PASSWORD_DEFAULT),
+                'role'       => 'admin',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
             ],
             [
-                'name'     => 'John Student',
-                'email'    => 'student@lms.com',
-                'password' => password_hash('student123', PASSWORD_DEFAULT),
-                'role'     => 'student'
+                'name'       => 'John Teacher',
+                'email'      => 'teacher@lms.com',
+                'password'   => password_hash('teacher123', PASSWORD_DEFAULT),
+                'role'       => 'teacher',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
             ],
             [
-                'name'     => 'Jane Instructor',
-                'email'    => 'instructor@lms.com',
-                'password' => password_hash('instructor123', PASSWORD_DEFAULT),
-                'role'     => 'instructor'
+                'name'       => 'Jane Student',
+                'email'      => 'student@lms.com',
+                'password'   => password_hash('student123', PASSWORD_DEFAULT),
+                'role'       => 'student',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+            ],
+            [
+                'name'       => 'Alice Johnson',
+                'email'      => 'alice@example.com',
+                'password'   => password_hash('password123', PASSWORD_DEFAULT),
+                'role'       => 'student',
+                'created_at' => date('Y-m-d H:i:s', strtotime('-2 days')),
+                'updated_at' => date('Y-m-d H:i:s', strtotime('-2 days'))
+            ],
+            [
+                'name'       => 'Bob Wilson',
+                'email'      => 'bob@example.com',
+                'password'   => password_hash('password123', PASSWORD_DEFAULT),
+                'role'       => 'teacher',
+                'created_at' => date('Y-m-d H:i:s', strtotime('-1 day')),
+                'updated_at' => date('Y-m-d H:i:s', strtotime('-1 day'))
             ],
         ];
 

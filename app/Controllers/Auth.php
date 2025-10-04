@@ -21,9 +21,25 @@ class Auth extends BaseController
      */
     public function register()
     {
+<<<<<<< HEAD
         // If user is already logged in, redirect to dashboard
         if ($this->session->get('user_id')) {
             return redirect()->to('/dashboard');
+=======
+        // If user is already logged in, redirect to role-specific dashboard
+        if ($this->session->get('user_id')) {
+            $role = $this->session->get('role');
+            switch ($role) {
+                case 'admin':
+                    return redirect()->to('/admin/dashboard');
+                case 'teacher':
+                    return redirect()->to('/teacher/dashboard');
+                case 'student':
+                    return redirect()->to('/student/dashboard');
+                default:
+                    return redirect()->to('/dashboard');
+            }
+>>>>>>> 5fb902f (Admin, Teacher, and Student Dashboard)
         }
 
         if ($this->request->getMethod() === 'POST') {
@@ -102,9 +118,25 @@ class Auth extends BaseController
      */
     public function login()
     {
+<<<<<<< HEAD
         // If user is already logged in, redirect to dashboard
         if ($this->session->get('user_id')) {
             return redirect()->to('/dashboard');
+=======
+        // If user is already logged in, redirect to role-specific dashboard
+        if ($this->session->get('user_id')) {
+            $role = $this->session->get('role');
+            switch ($role) {
+                case 'admin':
+                    return redirect()->to('/admin/dashboard');
+                case 'teacher':
+                    return redirect()->to('/teacher/dashboard');
+                case 'student':
+                    return redirect()->to('/student/dashboard');
+                default:
+                    return redirect()->to('/dashboard');
+            }
+>>>>>>> 5fb902f (Admin, Teacher, and Student Dashboard)
         }
 
         if ($this->request->getMethod() === 'POST') {
@@ -148,7 +180,22 @@ class Auth extends BaseController
 
                     $this->session->set($sessionData);
                     $this->session->setFlashdata('success', 'Welcome back, ' . $user['name'] . '!');
+<<<<<<< HEAD
                     return redirect()->to('/dashboard');
+=======
+                    
+                    // Redirect based on user role
+                    switch ($user['role']) {
+                        case 'admin':
+                            return redirect()->to('/admin/dashboard');
+                        case 'teacher':
+                            return redirect()->to('/teacher/dashboard');
+                        case 'student':
+                            return redirect()->to('/student/dashboard');
+                        default:
+                            return redirect()->to('/dashboard');
+                    }
+>>>>>>> 5fb902f (Admin, Teacher, and Student Dashboard)
                 } else {
                     $this->session->setFlashdata('error', 'Invalid email or password.');
                 }
