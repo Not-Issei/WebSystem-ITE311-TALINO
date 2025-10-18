@@ -3,17 +3,20 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\AnnouncementModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class Announcement extends BaseController
 {
     protected $db;
     protected $session;
+    protected $announcementModel;
 
     public function __construct()
     {
         $this->db = \Config\Database::connect();
         $this->session = \Config\Services::session();
+        $this->announcementModel = new AnnouncementModel();
     }
 
     /**
@@ -37,13 +40,18 @@ class Announcement extends BaseController
         $redirect = $this->checkAccess();
         if ($redirect) return $redirect;
 
-        // Fetch all announcements from database
+        // Fetch all announcements using AnnouncementModel, ordered by created_at DESC (newest first)
         $announcements = [];
         
-        // Check if announcements table exists
-        if ($this->db->tableExists('announcements')) {
-            $query = $this->db->query("SELECT * FROM announcements ORDER BY date_posted DESC");
-            $announcements = $query->getResultArray();
+        try {
+            // Check if announcements table exists
+            if ($this->db->tableExists('announcements')) {
+                $announcements = $this->announcementModel->getAllAnnouncements();
+            }
+        } catch (\Exception $e) {
+            // Handle any database errors gracefully
+            log_message('error', 'Error fetching announcements: ' . $e->getMessage());
+            $announcements = [];
         }
 
         $data = [

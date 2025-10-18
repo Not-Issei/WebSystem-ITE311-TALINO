@@ -151,7 +151,7 @@
                                 <h5 class="announcement-title"><?= esc($announcement['title']) ?></h5>
                                 <div class="announcement-date">
                                     <i class="fas fa-calendar-alt me-1"></i>
-                                    <?= date('F j, Y \a\t g:i A', strtotime($announcement['date_posted'])) ?>
+                                    <?= date('F j, Y \a\t g:i A', strtotime($announcement['created_at'])) ?>
                                 </div>
                                 <div class="announcement-content">
                                     <?= nl2br(esc($announcement['content'])) ?>
