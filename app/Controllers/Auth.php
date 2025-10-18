@@ -33,7 +33,7 @@ class Auth extends BaseController
                 case 'teacher':
                     return redirect()->to('/teacher/dashboard');
                 case 'student':
-                    return redirect()->to('/student/dashboard');
+                    return redirect()->to('/announcements');
                 default:
                     return redirect()->to('/dashboard');
             }
@@ -124,7 +124,7 @@ class Auth extends BaseController
                 case 'teacher':
                     return redirect()->to('/teacher/dashboard');
                 case 'student':
-                    return redirect()->to('/student/dashboard');
+                    return redirect()->to('/announcements');
                 default:
                     return redirect()->to('/dashboard');
             }
@@ -196,7 +196,7 @@ class Auth extends BaseController
                         case 'teacher':
                             return redirect()->to('/teacher/dashboard');
                         case 'student':
-                            return redirect()->to('/student/dashboard');
+                            return redirect()->to('/announcements');
                         default:
                             return redirect()->to('/dashboard');
                     }

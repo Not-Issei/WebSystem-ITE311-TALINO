@@ -30,7 +30,7 @@ $routes->post('/register/student', 'StudentRegistration::register');
 
 // Admin Dashboard Routes
 $routes->group('admin', function($routes) {
-    $routes->get('dashboard', 'AdminDashboard::index');
+    $routes->get('dashboard', 'Admin::dashboard');
     $routes->get('settings', 'AdminDashboard::settings');
     $routes->get('approvals', 'AdminDashboard::pendingApprovals');
     $routes->post('approve-user', 'AdminDashboard::approveUser');
@@ -40,7 +40,7 @@ $routes->group('admin', function($routes) {
 
 // Teacher Dashboard Routes
 $routes->group('teacher', function($routes) {
-    $routes->get('dashboard', 'TeacherDashboard::index');
+    $routes->get('dashboard', 'Teacher::dashboard');
     $routes->get('courses', 'TeacherDashboard::courses');
     $routes->get('students', 'TeacherDashboard::students');
     $routes->get('grades', 'TeacherDashboard::grades');
