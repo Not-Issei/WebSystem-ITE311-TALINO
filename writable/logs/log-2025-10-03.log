@@ -1,0 +1,622 @@
+ERROR - 2025-10-03 14:16:02 --> mysqli_sql_exception: Duplicate entry 'admin@lms.com' for key 'email' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Database\Seeds\UserSeeder.php(54): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\ITE311-TALINO\system\Database\Seeder.php(149): App\Database\Seeds\UserSeeder->run()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\ITE311-TALINO\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-10-03 14:28:25 --> mysqli_sql_exception: Duplicate entry 'admin@lms.com' for key 'email' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Database\Seeds\UserSeeder.php(54): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\ITE311-TALINO\system\Database\Seeder.php(149): App\Database\Seeds\UserSeeder->run()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\ITE311-TALINO\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-10-03 14:30:49 --> mysqli_sql_exception: Duplicate entry 'admin@lms.com' for key 'email' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Database\Seeds\UserSeeder.php(54): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\ITE311-TALINO\system\Database\Seeder.php(149): App\Database\Seeds\UserSeeder->run()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\ITE311-TALINO\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-10-03 14:30:59 --> mysqli_sql_exception: Duplicate entry 'admin@lms.com' for key 'email' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Database\Seeds\UserSeeder.php(54): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\ITE311-TALINO\system\Database\Seeder.php(149): App\Database\Seeds\UserSeeder->run()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\ITE311-TALINO\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-10-03 14:33:10 --> TypeError: CodeIgniter\CLI\InputOutput::input(): Return value must be of type string, bool returned
+[Method: CLI, Route: migrate:refresh]
+in SYSTEMPATH\CLI\InputOutput.php on line 46.
+ 1 SYSTEMPATH\CLI\CLI.php(260): CodeIgniter\CLI\InputOutput->input()
+ 2 SYSTEMPATH\Commands\Database\MigrateRefresh.php(78): CodeIgniter\CLI\CLI::prompt('Are you sure you want to refresh?', [...])
+ 3 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+ 4 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+ 5 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
+ 6 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 7 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2025-10-03 14:37:43 --> mysqli_sql_exception: Cannot truncate a table referenced in a foreign key constraint (`lms_talino`.`enrollments`, CONSTRAINT `enrollments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `lms_talino`.`users` (`id`)) in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('TRUNCATE `users...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE `users...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE `users...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2773): CodeIgniter\Database\BaseConnection->query('TRUNCATE `users...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\FixUsers.php(20): CodeIgniter\Database\BaseBuilder->truncate()
+#5 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\FixUsers->index()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FixUsers))
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2025-10-03 14:38:37 --> mysqli_sql_exception: Unknown column 'teacher_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(172): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(46): App\Controllers\TeacherDashboard->getTeacherStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\TeacherDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:38:37 --> mysqli_sql_exception: Unknown column 'c.teacher_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(182): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(46): App\Controllers\TeacherDashboard->getTeacherStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\TeacherDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:38:37 --> mysqli_sql_exception: Unknown column 'c.teacher_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(192): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(46): App\Controllers\TeacherDashboard->getTeacherStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\TeacherDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:38:37 --> mysqli_sql_exception: Unknown column 'c.teacher_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(204): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\TeacherDashboard.php(46): App\Controllers\TeacherDashboard->getTeacherStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\TeacherDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:39:52 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:39:52 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(196): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:39:52 --> mysqli_sql_exception: Unknown column 'grade' in 'field list' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT AVG(`gra...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT AVG(`gra...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT AVG(`gra...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT AVG(`gra...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(216): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-10-03 14:39:53 --> Error: Call to a member function getRowArray() on bool
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentDashboard.php on line 217.
+ 1 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+ERROR - 2025-10-03 14:42:41 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:42:41 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(196): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:42:41 --> mysqli_sql_exception: Unknown column 'grade' in 'field list' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT AVG(`gra...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT AVG(`gra...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT AVG(`gra...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT AVG(`gra...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(216): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-10-03 14:42:41 --> Error: Call to a member function getRowArray() on bool
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentDashboard.php on line 217.
+ 1 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+ERROR - 2025-10-03 14:43:23 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:43:23 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(196): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:43:23 --> mysqli_sql_exception: Unknown column 'grade' in 'field list' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT AVG(`gra...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT AVG(`gra...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT AVG(`gra...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT AVG(`gra...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(216): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-10-03 14:43:23 --> Error: Call to a member function getRowArray() on bool
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentDashboard.php on line 217.
+ 1 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+ERROR - 2025-10-03 14:43:24 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:43:24 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(196): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:43:24 --> mysqli_sql_exception: Unknown column 'grade' in 'field list' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT AVG(`gra...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT AVG(`gra...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT AVG(`gra...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT AVG(`gra...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(216): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-10-03 14:43:24 --> Error: Call to a member function getRowArray() on bool
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentDashboard.php on line 217.
+ 1 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+ERROR - 2025-10-03 14:45:27 --> mysqli_sql_exception: Cannot truncate a table referenced in a foreign key constraint (`lms_talino`.`enrollments`, CONSTRAINT `enrollments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `lms_talino`.`users` (`id`)) in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('TRUNCATE `users...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE `users...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE `users...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2773): CodeIgniter\Database\BaseConnection->query('TRUNCATE `users...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\FixUsers.php(20): CodeIgniter\Database\BaseBuilder->truncate()
+#5 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\FixUsers->index()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FixUsers))
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2025-10-03 14:45:27 --> mysqli_sql_exception: Duplicate entry 'admin@lms.com' for key 'email' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\FixUsers.php(51): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\FixUsers->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FixUsers))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:45:33 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:45:33 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(196): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2025-10-03 14:45:33 --> mysqli_sql_exception: Unknown column 'grade' in 'field list' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT AVG(`gra...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT AVG(`gra...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT AVG(`gra...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT AVG(`gra...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(216): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-10-03 14:45:33 --> Error: Call to a member function getRowArray() on bool
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentDashboard.php on line 217.
+ 1 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+CRITICAL - 2025-10-03 14:46:59 --> ErrorException: session_destroy(): Trying to destroy uninitialized session
+[Method: GET, Route: emergency-logout]
+in APPPATH\Controllers\Emergency.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'C:\\xampp\\htdocs\\ITE311-TALINO\\app\\Controllers\\Emergency.php', 16)
+ 2 APPPATH\Controllers\Emergency.php(16): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Emergency->logout()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emergency))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+ERROR - 2025-10-03 14:53:31 --> mysqli_sql_exception: Cannot truncate a table referenced in a foreign key constraint (`lms_talino`.`enrollments`, CONSTRAINT `enrollments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `lms_talino`.`users` (`id`)) in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('TRUNCATE `users...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE `users...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE `users...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(2773): CodeIgniter\Database\BaseConnection->query('TRUNCATE `users...', NULL, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\FixUsers.php(20): CodeIgniter\Database\BaseBuilder->truncate()
+#5 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\FixUsers->index()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FixUsers))
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-10-03 14:53:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot truncate a table referenced in a foreign key constraint (`lms_talino`.`enrollments`, CONSTRAINT `enrollments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `lms_talino`.`users` (`id`))
+[Method: GET, Route: fix-users]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2773): CodeIgniter\Database\BaseConnection->query('TRUNCATE `users`', null, false)
+ 2 APPPATH\Controllers\FixUsers.php(20): CodeIgniter\Database\BaseBuilder->truncate()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FixUsers->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FixUsers))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+CRITICAL - 2025-10-03 14:53:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot truncate a table referenced in a foreign key constraint (`lms_talino`.`enrollments`, CONSTRAINT `enrollments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `lms_talino`.`users` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE `users`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE `users`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2773): CodeIgniter\Database\BaseConnection->query('TRUNCATE `users`', null, false)
+ 4 APPPATH\Controllers\FixUsers.php(20): CodeIgniter\Database\BaseBuilder->truncate()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FixUsers->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FixUsers))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+CRITICAL - 2025-10-03 14:53:32 --> [Caused by] mysqli_sql_exception: Cannot truncate a table referenced in a foreign key constraint (`lms_talino`.`enrollments`, CONSTRAINT `enrollments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `lms_talino`.`users` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('TRUNCATE `users`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE `users`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE `users`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2773): CodeIgniter\Database\BaseConnection->query('TRUNCATE `users`', null, false)
+ 5 APPPATH\Controllers\FixUsers.php(20): CodeIgniter\Database\BaseBuilder->truncate()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FixUsers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FixUsers))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+DEBUG - 2025-10-03 14:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-03 14:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-03 14:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-03 14:58:00 --> mysqli_sql_exception: Unknown column 'student_id' in 'where clause' in C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-TALINO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-TALINO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ITE311-TALINO\app\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+#6 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+#7 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+#8 C:\xampp\htdocs\ITE311-TALINO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ITE311-TALINO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ITE311-TALINO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ITE311-TALINO\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-10-03 14:58:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'student_id' in 'where clause'
+[Method: GET, Route: student/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = :student_id:', [...], false)
+ 2 APPPATH\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+CRITICAL - 2025-10-03 14:58:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'student_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = :student_id:', [...], false)
+ 4 APPPATH\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
+CRITICAL - 2025-10-03 14:58:00 --> [Caused by] mysqli_sql_exception: Unknown column 'student_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `enrollments`
+WHERE `student_id` = :student_id:', [...], false)
+ 5 APPPATH\Controllers\StudentDashboard.php(186): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Controllers\StudentDashboard.php(46): App\Controllers\StudentDashboard->getStudentStats()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentDashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ITE311-TALINO\\public\\index.php')
