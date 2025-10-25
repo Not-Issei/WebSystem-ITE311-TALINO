@@ -5,128 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard - ITE311 TALINO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #2d3748;
         }
         
         .navbar {
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
         }
         
         .navbar-brand {
-            font-weight: 600;
-            color: white !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .card {
             border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
         }
         
-        .card-header {
-            background-color: #007bff;
-            color: white;
-            border-radius: 8px 8px 0 0 !important;
-            border-bottom: none;
-            padding: 1rem 1.5rem;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
         }
         
         .stats-card {
             text-align: center;
-            padding: 2rem 1rem;
-            transition: transform 0.2s;
+            padding: 2.5rem 1.5rem;
+            position: relative;
+            overflow: hidden;
         }
         
-        .stats-card:hover {
-            transform: translateY(-5px);
+        .stats-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
         }
+        
+        .stats-card.courses::before { background: var(--primary-gradient); }
+        .stats-card.assignments::before { background: var(--secondary-gradient); }
+        .stats-card.grades::before { background: var(--success-gradient); }
+        .stats-card.announcements::before { background: var(--warning-gradient); }
         
         .stats-number {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
+        .stats-card.courses .stats-number { background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stats-card.assignments .stats-number { background: var(--secondary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stats-card.grades .stats-number { background: var(--success-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stats-card.announcements .stats-number { background: var(--warning-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
         .stats-label {
-            color: #6c757d;
-            font-size: 0.9rem;
+            color: #718096;
+            font-size: 0.875rem;
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
         
         .stats-icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            opacity: 0.8;
         }
         
-        .stats-card.courses .stats-icon { color: #007bff; }
-        .stats-card.courses .stats-number { color: #007bff; }
-        .stats-card.assignments .stats-icon { color: #dc3545; }
-        .stats-card.assignments .stats-number { color: #dc3545; }
-        .stats-card.pending .stats-icon { color: #ffc107; }
-        .stats-card.pending .stats-number { color: #ffc107; }
-        .stats-card.grade .stats-icon { color: #28a745; }
-        .stats-card.grade .stats-number { color: #28a745; }
+        .stats-card.courses .stats-icon { color: #667eea; }
+        .stats-card.assignments .stats-icon { color: #f093fb; }
+        .stats-card.grades .stats-icon { color: #4facfe; }
+        .stats-card.announcements .stats-icon { color: #43e97b; }
         
-        .welcome-section {
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        .hero-section {
+            background: var(--primary-gradient);
             color: white;
-            border-radius: 8px;
-            padding: 2rem;
+            border-radius: 25px;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .nav-pills {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 0.5rem;
             margin-bottom: 2rem;
+            backdrop-filter: blur(20px);
         }
         
         .nav-pills .nav-link {
-            color: #6c757d;
-            border-radius: 6px;
-            margin-right: 0.5rem;
+            color: #4a5568;
+            border-radius: 12px;
+            margin: 0 0.25rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
         
         .nav-pills .nav-link.active {
-            background-color: #007bff;
+            background: var(--primary-gradient);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
         
         .student-badge {
-            background: linear-gradient(45deg, #007bff, #0056b3);
+            background: var(--success-gradient);
             color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.75rem;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .progress-ring {
+        .course-card {
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box, var(--primary-gradient) border-box;
+            transition: all 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--hover-shadow);
+        }
+        
+        .btn-gradient {
+            background: var(--primary-gradient);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .progress-circle {
             width: 120px;
             height: 120px;
-            margin: 0 auto;
+            border-radius: 50%;
+            background: conic-gradient(var(--success-gradient) 0deg, #e2e8f0 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            position: relative;
         }
         
-        .progress-ring-circle {
-            stroke: #e9ecef;
-            stroke-width: 8;
-            fill: transparent;
-            r: 52;
-            cx: 60;
-            cy: 60;
+        .progress-circle::before {
+            content: '';
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
         }
         
-        .progress-ring-progress {
-            stroke: #28a745;
-            stroke-width: 8;
-            stroke-linecap: round;
-            fill: transparent;
-            r: 52;
-            cx: 60;
-            cy: 60;
-            stroke-dasharray: 327;
-            stroke-dashoffset: 327;
-            transition: stroke-dashoffset 0.5s ease-in-out;
+        .progress-text {
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+        }
+        
+        .achievement-badge {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--warning-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
         }
     </style>
 </head>
@@ -170,22 +295,37 @@
             </div>
         <?php endif; ?>
 
-        <!-- Welcome Section -->
-        <div class="welcome-section">
+        <!-- Hero Section -->
+        <div class="hero-section">
             <div class="row align-items-center">
-                <div class="col-12">
-                    <h2 class="mb-2">
-                        <i class="fas fa-graduation-cap me-2"></i>Welcome back, <?= esc($user['name']) ?>!
-                    </h2>
-                    <p class="mb-3 opacity-90">Continue your learning journey and track your academic progress.</p>
-                    <div class="d-flex flex-wrap gap-3 mb-2">
-                        <span class="badge bg-white bg-opacity-20 px-3 py-2">
-                            <i class="fas fa-envelope me-1"></i><?= esc($user['email']) ?>
-                        </span>
-                        <span class="badge bg-white bg-opacity-20 px-3 py-2">
-                            <i class="fas fa-calendar me-1"></i><?= date('l, F j, Y') ?>
-                        </span>
+                <div class="col-lg-8">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-user-graduate" style="font-size: 3rem; opacity: 0.9;"></i>
+                        </div>
+                        <div>
+                            <h1 class="mb-1" style="font-weight: 700; font-size: 2.5rem;">Welcome back, <?= esc($user['name']) ?>!</h1>
+                            <p class="mb-0 opacity-90" style="font-size: 1.1rem;">Ready to continue your learning adventure?</p>
+                        </div>
                     </div>
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <div class="glass-card px-3 py-2">
+                            <i class="fas fa-envelope me-2"></i><?= esc($user['email']) ?>
+                        </div>
+                        <div class="glass-card px-3 py-2">
+                            <i class="fas fa-calendar me-2"></i><?= date('l, F j, Y') ?>
+                        </div>
+                        <div class="glass-card px-3 py-2">
+                            <i class="fas fa-clock me-2"></i><?= date('g:i A') ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="achievement-badge">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="mb-1">Keep Learning!</h5>
+                    <p class="mb-0 opacity-80">You're doing great</p>
                 </div>
             </div>
         </div>
@@ -376,13 +516,13 @@
                                 </a>
                             </div>
                             <div class="col-md-3 mb-2">
-                                <a href="<?= base_url('/student/grades') ?>" class="btn btn-info w-100">
-                                    <i class="fas fa-chart-line me-2"></i>View Grades
+                                <a href="<?= base_url('/student/materials') ?>" class="btn btn-info w-100">
+                                    <i class="fas fa-folder-open me-2"></i>Course Materials
                                 </a>
                             </div>
                             <div class="col-md-3 mb-2">
-                                <a href="#" class="btn btn-warning w-100">
-                                    <i class="fas fa-user-edit me-2"></i>Edit Profile
+                                <a href="<?= base_url('/student/grades') ?>" class="btn btn-warning w-100">
+                                    <i class="fas fa-chart-line me-2"></i>View Grades
                                 </a>
                             </div>
                         </div>

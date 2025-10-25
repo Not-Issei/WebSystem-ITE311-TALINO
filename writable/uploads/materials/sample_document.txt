@@ -1,0 +1,5 @@
+This is a sample uploaded file for demonstration purposes.
+File uploaded via ITE311-TALINO Materials Management System.
+Date: <?= date('Y-m-d H:i:s') ?>
+
+This file demonstrates how uploaded materials are stored in the server's file system.

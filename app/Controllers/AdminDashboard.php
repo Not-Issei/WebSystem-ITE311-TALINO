@@ -45,20 +45,72 @@ class AdminDashboard extends BaseController
         $redirect = $this->checkAdminAccess();
         if ($redirect) return $redirect;
 
-        // Get statistics for admin dashboard
-        $stats = $this->getAdminStats();
+        try {
+            // Get statistics for admin dashboard
+            $stats = $this->getAdminStats();
 
-        $data = [
-            'user' => [
-                'id' => $this->session->get('user_id'),
-                'name' => $this->session->get('name'),
-                'email' => $this->session->get('email'),
-                'role' => $this->session->get('role')
-            ],
-            'stats' => $stats
-        ];
+            // Get students and teachers for display
+            $builder = $this->db->table('users');
+            $students = $builder->where('role', 'student')
+                               ->where('status', 'active')
+                               ->orderBy('created_at', 'DESC')
+                               ->limit(10)
+                               ->get()
+                               ->getResultArray();
 
-        return view('dashboards/admin', $data);
+            // Reset builder for teachers query
+            $builder = $this->db->table('users');
+            $teachers = $builder->where('role', 'teacher')
+                               ->where('status', 'active')
+                               ->orderBy('created_at', 'DESC')
+                               ->limit(10)
+                               ->get()
+                               ->getResultArray();
+
+            // Reset builder for pending count
+            $builder = $this->db->table('users');
+            $pendingCount = $builder->where('status', 'pending')->countAllResults();
+
+            $data = [
+                'user' => [
+                    'id' => $this->session->get('user_id'),
+                    'name' => $this->session->get('name'),
+                    'email' => $this->session->get('email'),
+                    'role' => $this->session->get('role')
+                ],
+                'stats' => $stats,
+                'students' => $students ?? [],
+                'teachers' => $teachers ?? [],
+                'pending_count' => $pendingCount ?? 0
+            ];
+
+            return view('admin_dashboard', $data);
+            
+        } catch (\Exception $e) {
+            log_message('error', 'Admin Dashboard Error: ' . $e->getMessage());
+            
+            // Return basic dashboard with empty data
+            $data = [
+                'user' => [
+                    'id' => $this->session->get('user_id'),
+                    'name' => $this->session->get('name'),
+                    'email' => $this->session->get('email'),
+                    'role' => $this->session->get('role')
+                ],
+                'stats' => [
+                    'total_users' => 0,
+                    'admin_count' => 0,
+                    'teacher_count' => 0,
+                    'student_count' => 0
+                ],
+                'students' => [],
+                'teachers' => [],
+                'pending_count' => 0,
+                'error' => 'Error loading dashboard data: ' . $e->getMessage()
+            ];
+
+            return view('admin_dashboard', $data);
+        }
     }
 
     /**
@@ -238,4 +290,5 @@ class AdminDashboard extends BaseController
 
         return $this->response->setStatusCode(405);
     }
+
 }

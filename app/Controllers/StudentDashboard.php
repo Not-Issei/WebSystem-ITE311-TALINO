@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\CourseModel;
 use App\Models\EnrollmentModel;
+use App\Models\MaterialModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class StudentDashboard extends BaseController
@@ -13,6 +14,7 @@ class StudentDashboard extends BaseController
     protected $session;
     protected $courseModel;
     protected $enrollmentModel;
+    protected $materialModel;
 
     public function __construct()
     {
@@ -20,6 +22,7 @@ class StudentDashboard extends BaseController
         $this->session = \Config\Services::session();
         $this->courseModel = new CourseModel();
         $this->enrollmentModel = new EnrollmentModel();
+        $this->materialModel = new MaterialModel();
     }
 
     /**
@@ -462,5 +465,31 @@ class StudentDashboard extends BaseController
         }
 
         return $this->response->setStatusCode(405);
+    }
+
+    /**
+     * Student Materials Page
+     */
+    public function materials()
+    {
+        $redirect = $this->checkStudentAccess();
+        if ($redirect) return $redirect;
+
+        $student_id = $this->session->get('user_id');
+        
+        // Get materials for all enrolled courses
+        $materials = $this->materialModel->getMaterialsForStudent($student_id);
+
+        $data = [
+            'title' => 'My Course Materials',
+            'materials' => $materials,
+            'user' => [
+                'name' => $this->session->get('name'),
+                'email' => $this->session->get('email'),
+                'role' => $this->session->get('role')
+            ]
+        ];
+
+        return view('materials/student_materials', $data);
     }
 }
